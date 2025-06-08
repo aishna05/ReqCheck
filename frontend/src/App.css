@@ -1,0 +1,159 @@
+/* app.css - Pastel theme for your React App */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fef6fb;
+  margin: 0;
+  padding: 2rem;
+  color: #444;
+}
+
+h1, h2 {
+  color: #555;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+button {
+  background-color: #b9e4c9;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a0d9b6;
+}
+
+button + button {
+  margin-left: 0 auto;
+  background-color: #ffc8dd;
+}
+
+button + button:hover {
+  background-color: #f8b3d4;
+}
+
+.mock-manager,
+.RequestForm,
+.RequestHistory,
+.ViewMocks {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: #cdb4db;
+  color: #333;
+}
+
+.btn-primary:hover {
+  background-color: #bfa2d9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #eaeaea;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f3d5c0;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+code {
+  background-color: #f6f6f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Responsive table container */
+.RequestHistory table {
+  width: 100%;
+  min-width: 600px; /* minimum width for proper layout */
+}
+
+/* Wrap table in a scrollable container */
+.RequestHistory table {
+  border-collapse: collapse;
+}
+
+.RequestHistory table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background-color: #fff;
+}
+
+/* Optional: add padding below table on mobile */
+@media (max-width: 600px) {
+  .RequestHistory table-container {
+    margin-bottom: 1rem;
+  }
+}
