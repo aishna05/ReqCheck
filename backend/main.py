@@ -1,13 +1,11 @@
 from fastapi import FastAPI
-import models
-from database import engine, Base
-from models import Base, RequestLog, MockEndpoint
-from routes import mock_router
-from models import RequestLog, MockEndpoint
-from routes import mock_router , request_router
-from schemas import RequestForm
+import backend.models
+from backend.database import engine, Base ,  SessionLocal
+from backend.models import Base, RequestLog, MockEndpoint
+from backend.routes import mock_router ,  request_router
+from backend.models import RequestLog, MockEndpoint
+from backend.schemas import RequestForm
 from fastapi.middleware.cors import CORSMiddleware
-from database import SessionLocal
 from fastapi.staticfiles import StaticFiles
 
 
