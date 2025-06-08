@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, DateTime
 from datetime import datetime
-from database import Base
+from backend.database import Base
 
 class RequestLog(Base):
     __tablename__ = "request_logs"
