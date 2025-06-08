@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Adjust this to your needs
+    allow_origins=["https://req-check-three.vercel.app/"],  # Adjust this to your needs
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
