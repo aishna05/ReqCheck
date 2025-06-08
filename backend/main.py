@@ -8,10 +8,15 @@ from routes import mock_router , request_router
 from schemas import RequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from database import SessionLocal
+from fastapi.staticfiles import StaticFiles
+
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="frontend/build/static"), name="static")
+
 
 app.add_middleware(
     CORSMiddleware,
