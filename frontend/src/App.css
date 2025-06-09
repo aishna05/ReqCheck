@@ -132,17 +132,8 @@ code {
 }
 
 /* Responsive table container */
-.RequestHistory table {
+.RequestHistory .table-container {
   width: 100%;
-  min-width: 600px; /* minimum width for proper layout */
-}
-
-/* Wrap table in a scrollable container */
-.RequestHistory table {
-  border-collapse: collapse;
-}
-
-.RequestHistory table-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   margin-top: 1rem;
@@ -151,9 +142,48 @@ code {
   background-color: #fff;
 }
 
-/* Optional: add padding below table on mobile */
+/* Make table fit its container and prevent overflow */
+.RequestHistory table {
+  width: 100%;
+  min-width: 600px; /* allow horizontal scroll if content is wide */
+  border-collapse: collapse;
+  table-layout:fixed;
+}
+td {
+  white-space: nowrap;        /* Prevent text from wrapping to next line */
+  overflow:scroll;           /* Hide overflow content */
+  /* text-overflow: ellipsis;    Show "..." at the end */
+  max-width: 150px;           /* Set a max width for the cell */
+  /* You can also use width instead of max-width depending on your layout */
+}
+th {
+  white-space: nowrap;        /* Prevent text from wrapping to next line */          /* Hide overflow content */
+  text-overflow: ellipsis;    /* Show "..." at the end */
+  max-width: 150px;           /* Set a max width for the header cell */
+  /* You can also use width instead of max-width depending on your layout */  
+  font-weight: 600;   
+}
+/* Hide scrollbar but keep scrolling functionality */
+
+td{
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+td::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Responsive: On small screens, allow horizontal scroll */
 @media (max-width: 600px) {
-  .RequestHistory table-container {
+  .RequestHistory .table-container {
     margin-bottom: 1rem;
+  }
+  .RequestHistory table {
+    min-width: 400px;
+    font-size: 0.95rem;
+  }
+  th, td {
+    white-space: nowrap;
   }
 }

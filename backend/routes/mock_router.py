@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from ..database import SessionLocal
-from ..models import MockEndpoint
-from ..schemas import MockCreate
+from database import SessionLocal
+from models import MockEndpoint
+from schemas import MockCreate
 import json
 
 router = APIRouter()

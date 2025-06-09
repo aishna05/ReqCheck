@@ -2,9 +2,9 @@
 
 from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException
-from ..schemas import RequestForm
-from ..models import RequestLog
-from ..database import SessionLocal
+from schemas import RequestForm
+from models import RequestLog
+from database import SessionLocal
 from sqlalchemy.orm import Session
 import json
 

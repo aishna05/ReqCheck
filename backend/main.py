@@ -1,24 +1,24 @@
 from fastapi import FastAPI
-import backend.models
-from backend.database import engine, Base ,  SessionLocal
-from backend.models import Base, RequestLog, MockEndpoint
-from backend.routes import mock_router ,  request_router
-from backend.models import RequestLog, MockEndpoint
-from backend.schemas import RequestForm
+import models
+from database import engine, Base ,  SessionLocal
+from models import Base, RequestLog, MockEndpoint
+from routes import mock_router ,  request_router
+from models import RequestLog, MockEndpoint
+from schemas import RequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 
-backend.models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="frontend/build/static"), name="static")
+# app.mount("/static", StaticFiles(directory="frontend/build/static"), name="static")
 
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://req-check-three.vercel.app/"],  # Adjust this to your needs
+    allow_origins=["http://localhost:3000"],  # Adjust this to your needs
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
