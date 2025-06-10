@@ -5,7 +5,7 @@ function ViewMocks() {
 
   useEffect(() => {
     const fetchMocks = async () => {
-      const response = await fetch('http://localhost:8000/api/mocks');
+      const response = await fetch('https://reqcheck-71k8.onrender.com/api/mocks');
       const data = await response.json();
       setMocks(data);
     };

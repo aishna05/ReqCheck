@@ -7,7 +7,7 @@ function RequestHistory() {
     const fetchRequestHistory = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8000/request/api/request-history"
+          "https://reqcheck-71k8.onrender.com/request/api/request-history"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

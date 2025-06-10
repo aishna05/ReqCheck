@@ -51,7 +51,7 @@ function RequestForm() {
                 status: actualResponse.status >= 200 && actualResponse.status < 300 ? 'success' : 'error',
             };
 
-            const logResponse = await fetch('http://localhost:8000/request/api/requestlog', {
+            const logResponse = await fetch('https://reqcheck-71k8.onrender.com/request/api/requestlog', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

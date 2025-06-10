@@ -16,7 +16,7 @@ function MockManager() {
             return;
         }
 
-        const response = await fetch('http://localhost:8000/api/mock', {
+        const response = await fetch('https://reqcheck-71k8.onrender.com/api/mock', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function MockManager() {
             return;
         }
 
-        const response = await fetch(`http://localhost:8000/api/mock/${id}`, {
+        const response = await fetch(`https://reqcheck-71k8.onrender.com/api/mock/${id}`, {
             method: 'DELETE',
         });
 
